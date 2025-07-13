@@ -1,14 +1,18 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div>
+      <h4 :style="스타일">{{ products[0] }}</h4>
+      <p>{{ price1 }}만원</p>
+    </div>
+    <div>
+      <h4>{{ products[1] }}</h4>
+      <p>{{ price2 }}만원</p>
+    </div>
+    <div>
+      <h4>{{ products[2] }}</h4>
+      <p>{{ price3 }}만원</p>
     </div>
   </header>
 
@@ -16,6 +20,26 @@ import TheWelcome from './components/TheWelcome.vue'
     <TheWelcome />
   </main>
 </template>
+
+<script>
+import TheWelcome from './components/TheWelcome.vue'
+
+export default {
+  name: 'App',
+  components: {
+    TheWelcome
+  },
+  data() {
+    return {
+      스타일 : 'color:red',
+      price1: 60,
+      price2: 70,
+      price3: 80,
+      products: ['역삼동원룸', '천호동원룸', '마포구원룸']
+    }
+  }
+}
+</script>
 
 <style scoped>
 header {
