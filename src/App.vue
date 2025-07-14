@@ -4,8 +4,8 @@
   </div>
 
   <div>
-    <a v-for="m in productItem" :key="m">{{ m }}</a>
-    <a v-for="m in priceItem" :key="m">{{ m }}</a>
+    <a v-for="pro in productItem" :key="pro">{{ pro }}</a>
+    <a v-for="pri in priceItem" :key="pri">{{ pri }}</a>
   </div>
 
 
